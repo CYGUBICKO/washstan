@@ -1,0 +1,42 @@
+---
+title: "AR1 models in stan"
+author: "Steve"
+date: "2020 Jan 12 (Sun)"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+load("fitting.rda")
+```
+
+## True values
+
+```{R}
+print(betas_df)
+```
+
+
+## Continous outcome
+
+### BRMS
+
+```{R}
+summary(brms2)
+```
+
+### Binary response
+
+
+```{R}
+summary(brmsbin)
+```
+
+### STAN
+
+```{R}
+print(stan1, pars=c("beta"))
+```
+
+
+
